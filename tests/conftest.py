@@ -1,10 +1,11 @@
 import pytest
 from selenium import webdriver
+from pages.products_section import MainPage
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def driver():
     # Настройки браузера
     options = webdriver.ChromeOptions()
@@ -18,4 +19,5 @@ def driver():
     # Закрытие браузера после теста
     print("End test")
     driver.quit()
+
 
