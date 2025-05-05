@@ -11,9 +11,9 @@ class OsSection(FilmSection):
 
     # LOCATORS
     os = "//span[contains(text(), 'OS')]"
-    license = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[15]"
+    license = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[16]"
     new_license = "//a[contains(text(), 'New License')]"
-    os_tab = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[16]"
+    os_tab = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[17]"
     new_os = "//a[contains(text(), 'New OS')]"
     os_url = "(//input[@class='border w-full rounded-md px-4 py-2'])[2]"
     brand_os_dropdown = "(//div[@class='choices__item choices__item--selectable'])[1]"

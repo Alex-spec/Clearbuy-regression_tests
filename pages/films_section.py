@@ -12,23 +12,23 @@ class FilmSection(MainPage):
     # LOCATORS
     """Genres tab locators"""
     films = "//span[contains(text(), 'Films/TV')]"
-    genres = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[10]"
+    genres = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[11]"
     new_genre = "//a[contains(text(), 'New Genre')]"
     genre_name = "//input[@name='name']"
 
     """Age ratings locators"""
-    age = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[11]"
+    age = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[12]"
     new_rating = "//a[contains(text(), 'New Rating')]"
     minimal_age = "//input[@type='number']"
 
     """Films locators"""
-    film = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[12]"
+    film = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[13]"
     new_film = "//a[contains(text(), 'New Film')]"
     age_dropdown = "(//div[@class='choices mb-0 flex-1'])[2]"
     age_search = "(//input[@type='search'])[2]"
 
     """Reviews locators"""
-    review = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[13]"
+    review = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[14]"
     new_review = "//a[contains(text(), 'New Review')]"
     film_field = "(//input[@class='border w-full rounded-md px-4 py-2'])[1]"
     test_film = "//a[contains(text(), 'Test film')]"
@@ -36,7 +36,7 @@ class FilmSection(MainPage):
     rating_field = "(//input[@class='border w-full rounded-md px-4 py-2'])[4]"
 
     """People locators"""
-    people = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[14]"
+    people = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[15]"
     new_people = "//a[contains(text(), 'Add new')]"
     people_surname = "//input[@name='surname']"
 

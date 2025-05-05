@@ -429,7 +429,9 @@ class OtherSection(UserSection):
         self.click_new_allowed_domain()
         self.input_domain_allowed_field()
         self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "new item saved successfully")
+        self.assert_word(self.get_success_notification(), "New item saved successfully")
+        self.click_delete_item_button()
+        self.click_delete_confirmation()
         time.sleep(0.7)
 
     def badges_tab_test(self):

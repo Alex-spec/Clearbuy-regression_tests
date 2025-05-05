@@ -11,12 +11,12 @@ class UserSection(OsSection):
     # LOCATORS
     """Roles locators"""
     users = "//span[contains(text(), 'Users')]"
-    roles = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[17]"
+    roles = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[18]"
     new_role = "//a[contains(text(), 'New Role')]"
     permission = "(//div[@class='mr-1 checkbox__control'])[1]"
 
     """Users locators"""
-    users_tab = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[18]"
+    users_tab = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[19]"
     new_user = "//a[contains(text(), 'New User')]"
     user_name = "//input[@name='name']"
     email = "//input[@name='email']"
