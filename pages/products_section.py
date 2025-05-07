@@ -11,232 +11,244 @@ class MainPage(Base):
 
     # LOCATORS
     """Attributes group locators"""
-    attribute_groups = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[1]"
-    new_attribute_button = "//a[@class='font-semibold text-white font-grotesk bg-primary btn-shadow hover:bg-green-400 hover:shadow-none py-1 px-5 rounded']"
-    name_attribute_field = "//input[@type='text']"
-    sort_order = "//input[@type='number']"
-    attribute_slider = "//span[@class='slider']"
-    save_changes_button = "//a[contains(text(), 'Save changes')]"
-    success_notification = "//div[@x-data='notification(0)']"
-    delete_item_button ="//a[contains(text(), 'Delete item')]"
-    delete_confirmation = "/html/body/div[3]/div/div/div/a[2]"
-    deleted_notification = "//div[contains(text(), 'deleted successfully')]"
+    ATTRIBUTE_GROUPS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[1]"
+    NEW_ATTRIBUTE_BUTTON = "//a[@class='font-semibold text-white font-grotesk bg-primary btn-shadow hover:bg-green-400 hover:shadow-none py-1 px-5 rounded']"
+    NAME_ATTRIBUTE_FIELD = "//input[@type='text']"
+    SORT_ORDER = "//input[@type='number']"
+    ATTRIBUTE_SLIDER = "//span[@class='slider']"
+    SAVE_CHANGES_BUTTON = "//a[contains(text(), 'Save changes')]"
+    SUCCESS_NOTIFICATION = "//div[@x-data='notification(0)']"
+    DELETE_ITEM_BUTTON = "//a[contains(text(), 'Delete item')]"
+    DELETE_CONFIRMATION = "/html/body/div[3]/div/div/div/a[2]"
+    DELETED_NOTIFICATION = "//div[contains(text(), 'deleted successfully')]"
 
     """Attributes locators"""
-    attributes = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[2]"
-    name_field = "//input[@name='name']"
-    type_dropdown = "(//div[@role='combobox'])[2]"
-    numeric_option = "//option[contains(text(), 'numeric')]"
-    kind_checkbox = "(//div[@class='radio__control__indicator'])[1]"
-    group_dropdown = "(//div[@role='combobox'])[3]"
+    ATTRIBUTES = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[2]"
+    NAME_FIELD = "//input[@name='name']"
+    TYPE_DROPDOWN = "(//div[@role='combobox'])[2]"
+    NUMERIC_OPTION = "//option[contains(text(), 'numeric')]"
+    KIND_CHECKBOX = "(//div[@class='radio__control__indicator'])[1]"
+    GROUP_DROPDOWN = "(//div[@role='combobox'])[3]"
 
     """Ratings locators"""
-    ratings = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[3]"
-    ratings_slider = "//span[@class='slider']"
-    speakers_checkbox = "(//div[@class='radio__control__indicator'])[1]"
+    RATINGS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[3]"
+    RATINGS_SLIDER = "//span[@class='slider']"
+    SPEAKERS_CHECKBOX = "(//div[@class='radio__control__indicator'])[1]"
 
     """Categories locators"""
-    categories = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[4]"
-    commission_field = "//input[@name='commission_percent']"
-    headphones_radiobutton = "(//div[@class='radio__control__indicator'])[1]"
+    CATEGORIES = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[4]"
+    COMMISSION_FIELD = "//input[@name='commission_percent']"
+    HEADPHONES_RADIOBUTTON = "(//div[@class='radio__control__indicator'])[1]"
 
     """Products locators"""
-    products = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[5]"
-    category_dropdown = "(//div[@class='choices mb-0 flex-1'])[3]"
-    category_option = "//div[@id='choices--category-item-choice-2']"
-    brand_dropdown = "(//div[@class='choices mb-0 flex-1'])[3]"
-    brand_search = "(//input[@class='choices__input choices__input--cloned'])[4]"
-    retail_field = "//input[@name='price_msrp']"
-    retail_select_dropdown = "(//div[@class='choices mb-0 flex-1'])[5]"
-    select_search = "(//input[@class='choices__input choices__input--cloned'])[5]"
-    product_date = "//input[@type='date']"
-    product_save_changes_button = "//button[contains(text(), 'Save changes')]"
-    delete_product_button = "//a[contains(text(), 'Delete product')]"
-    delete_product_confirmation = "/html/body/div[1]/div[3]/div/div/div/a[2]"
-    product_deleted_notification = "//div[contains(text(), 'Deleted successfully')]"
+    PRODUCTS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[5]"
+    CATEGORY_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[3]"
+    CATEGORY_OPTION = "//div[@id='choices--category-item-choice-2']"
+    BRAND_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[3]"
+    BRAND_SEARCH = "(//input[@class='choices__input choices__input--cloned'])[4]"
+    RETAIL_FIELD = "//input[@name='price_msrp']"
+    RETAIL_SELECT_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[5]"
+    SELECT_SEARCH = "(//input[@class='choices__input choices__input--cloned'])[5]"
+    PRODUCT_DATE = "//input[@type='date']"
+    PRODUCT_SAVE_CHANGES_BUTTON = "//button[contains(text(), 'Save changes')]"
+    DELETE_PRODUCT_BUTTON = "//a[contains(text(), 'Delete product')]"
+    DELETE_PRODUCT_CONFIRMATION = "/html/body/div[1]/div[3]/div/div/div/a[2]"
+    PRODUCT_DELETED_NOTIFICATION = "//div[contains(text(), 'Deleted successfully')]"
 
     """Deals locators"""
-    deals = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[6]"
-    deal_price = "//input[@name='price']"
-    deal_category = "(//div[@class='choices__item choices__item--selectable'])[2]"
-    deal_category_search = "(//input[@type='search'])[2]"
-    deal_url = "(//input[@name='url'])"
-    deal_image = "//div[@class='flex']"
-    image_option = "(//label[@x-data='{ isChecked: false }'])[1]"
-    image_option_confirm = "//a[contains(text(), 'Confirm')]"
+    DEALS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[6]"
+    DEAL_PRICE = "//input[@name='price']"
+    DEAL_CATEGORY = "(//div[@class='choices__item choices__item--selectable'])[2]"
+    DEAL_CATEGORY_SEARCH = "(//input[@type='search'])[2]"
+    DEAL_URL = "(//input[@name='url'])"
+    DEAL_IMAGE = "//div[@class='flex']"
+    IMAGE_OPTION = "(//label[@x-data='{ isChecked: false }'])[1]"
+    IMAGE_OPTION_CONFIRM = "//a[contains(text(), 'Confirm')]"
 
     """FAQ locators"""
-    faq = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[7]"
-    faq_question = "//input[@name='question']"
-    faq_answer = "//body[@id='tinymce']"
+    FAQ = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[7]"
+    FAQ_QUESTION = "//input[@name='question']"
+    FAQ_ANSWER = "//body[@id='tinymce']"
 
     """FAQ groups locators"""
-    faq_groups = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[8]"
-    faq_groups_name = "//input[@name='name']"
+    FAQ_GROUPS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[8]"
+    FAQ_GROUPS_NAME = "//input[@name='name']"
 
     """Model families locators"""
-    model = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[9]"
+    MODEL = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[9]"
 
     # GETTERS
     """Attribute groups getters"""
 
     def get_attribute_groups(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.attribute_groups)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ATTRIBUTE_GROUPS)))
 
     def get_new_attribute_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_attribute_button)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_ATTRIBUTE_BUTTON)))
 
     def get_name_attribute_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.name_attribute_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NAME_ATTRIBUTE_FIELD)))
 
     def get_sort_order(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.sort_order)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.SORT_ORDER)))
 
     def get_attribute_slider(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.attribute_slider)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ATTRIBUTE_SLIDER)))
 
     def get_save_changes_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.save_changes_button)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.SAVE_CHANGES_BUTTON)))
 
     def get_success_notification(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.success_notification)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.SUCCESS_NOTIFICATION)))
 
     def get_delete_item_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.delete_item_button)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_ITEM_BUTTON)))
 
     def get_delete_confirmation(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.delete_confirmation)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_CONFIRMATION)))
 
     def get_deleted_notification(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deleted_notification)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETED_NOTIFICATION)))
 
     """Attributes getters"""
+
     def get_attributes(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.attributes)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ATTRIBUTES)))
 
     def get_name_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.name_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NAME_FIELD)))
 
     def get_type_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.type_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.TYPE_DROPDOWN)))
 
     def get_numeric_option(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.numeric_option)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NUMERIC_OPTION)))
 
     def get_kind_checkbox(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.kind_checkbox)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.KIND_CHECKBOX)))
 
     def get_group_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.group_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.GROUP_DROPDOWN)))
 
     """Ratings getters"""
+
     def get_ratings(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ratings)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RATINGS)))
 
     def get_ratings_slider(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ratings_slider)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RATINGS_SLIDER)))
 
     def get_speakers_checkbox(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.speakers_checkbox)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.SPEAKERS_CHECKBOX)))
 
     """Categories getters"""
+
     def get_categories(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.categories)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.CATEGORIES)))
 
     def get_commission_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.commission_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.COMMISSION_FIELD)))
 
     def get_headphones_radiobutton(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.headphones_radiobutton)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.HEADPHONES_RADIOBUTTON)))
 
     """Products getters"""
+
     def get_products(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.products)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PRODUCTS)))
 
     def get_category_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.category_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.CATEGORY_DROPDOWN)))
 
     def get_category_option(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.category_option)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.CATEGORY_OPTION)))
 
     def get_brand_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.brand_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.BRAND_DROPDOWN)))
 
     def get_brand_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.brand_search)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.BRAND_SEARCH)))
 
     def get_retail_select_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.retail_select_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RETAIL_SELECT_DROPDOWN)))
 
     def get_retail_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.retail_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RETAIL_FIELD)))
 
     def get_select_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.select_search)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.SELECT_SEARCH)))
 
     def get_product_date(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.product_date)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PRODUCT_DATE)))
 
     def get_product_save_changes_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.product_save_changes_button)))
+        return WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, self.PRODUCT_SAVE_CHANGES_BUTTON)))
 
     def get_delete_product_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.delete_product_button)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_PRODUCT_BUTTON)))
 
     def get_delete_product_confirmation(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.delete_product_confirmation)))
+        return WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, self.DELETE_PRODUCT_CONFIRMATION)))
 
     def get_product_deleted_notification(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.product_deleted_notification)))
+        return WebDriverWait(self.driver, 30).until(
+            EC.element_to_be_clickable((By.XPATH, self.PRODUCT_DELETED_NOTIFICATION)))
 
     """Deals getters"""
+
     def get_deals(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deals)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DEALS)))
 
     def get_deal_price(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deal_price)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DEAL_PRICE)))
 
     def get_deal_category(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deal_category)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DEAL_CATEGORY)))
 
     def get_deal_category_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deal_category_search)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DEAL_CATEGORY_SEARCH)))
 
     def get_deal_url(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deal_url)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DEAL_URL)))
 
     def get_deal_image(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.deal_image)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DEAL_IMAGE)))
 
     def get_image_option(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.image_option)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.IMAGE_OPTION)))
 
     def get_image_option_confirm(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.image_option_confirm)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.IMAGE_OPTION_CONFIRM)))
 
     """Faq getters"""
+
     def get_faq(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.faq)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FAQ)))
 
     def get_faq_question(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.faq_question)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FAQ_QUESTION)))
 
     def get_faq_answer(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.faq_answer)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FAQ_ANSWER)))
 
     """Faq groups getters"""
+
     def get_faq_groups(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.faq_groups)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FAQ_GROUPS)))
 
     def get_faq_groups_name(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.faq_groups_name)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FAQ_GROUPS_NAME)))
 
     """Model families getters"""
+
     def get_model(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.model)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.MODEL)))
 
     # ACTIONS
     """Attribute groups actions"""
+
     def click_attribute_groups(self):
         self.get_attribute_groups().click()
         print("Clicked on the 'Attribute Groups' tab")
@@ -273,6 +285,7 @@ class MainPage(Base):
         print("Clicked on the 'Attributes' tab")
 
     """Attributes actions"""
+
     def click_delete_confirmation(self):
         self.get_delete_confirmation().click()
         print("Confirmed deletion")
@@ -300,6 +313,7 @@ class MainPage(Base):
         print("Clicked the 'Group' dropdown and selected an option")
 
     """Ratings actions"""
+
     def click_ratings(self):
         self.get_ratings().click()
         print("Clicked on the 'Ratings' tab")
@@ -313,6 +327,7 @@ class MainPage(Base):
         print("Clicked on the 'Speakers' radiobutton")
 
     """Categories actions"""
+
     def click_categories(self):
         self.get_categories().click()
         print("Clicked on the 'Categories' tab")
@@ -326,6 +341,7 @@ class MainPage(Base):
         print("Clicked on the 'Headphones' radiobutton")
 
     """Products actions"""
+
     def click_category_dropdown(self):
         self.get_category_dropdown().click()
         print("Clicked on the 'Category' dropdown")
@@ -381,6 +397,7 @@ class MainPage(Base):
         print("Clicked 'Delete Product' button")
 
     """Deals actions"""
+
     def click_deals(self):
         self.get_deals().click()
         print("Clicked on the 'Deals' tab")
@@ -408,6 +425,7 @@ class MainPage(Base):
         print("Set the deal image")
 
     """FAQ actions"""
+
     def click_faq(self):
         self.get_faq().click()
         print("Clicked on the 'FAQ' tab")
@@ -425,6 +443,7 @@ class MainPage(Base):
         print("Filled in the answer field")
 
     """FAQ groups actions"""
+
     def click_faq_groups(self):
         self.get_faq_groups().click()
         print("Clicked on the 'FAQ Groups' tab")
@@ -435,6 +454,7 @@ class MainPage(Base):
         print("Filled in the group name field")
 
     """Model families actions"""
+
     def click_model_tab(self):
         self.get_model().click()
         print("Clicked on the 'Model Families' tab")

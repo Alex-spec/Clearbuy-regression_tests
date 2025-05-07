@@ -4,6 +4,13 @@ from selenium.webdriver.common.by import By
 
 class Base:
     """Base class containing generic methods"""
+    # ==== Локаторы (константы) ====
+    INPUT_EMAIL = "//input[@id='email']"
+    INPUT_PASSWORD = "//input[@id='password']"
+    BUTTON_SUBMIT = "//button[@type='submit']"
+    USER_FOR_TEST = "//div[contains(text(), 'Alexander')]"
+    URL = 'https://dev.clearbuy.com/login'
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -32,32 +39,33 @@ class Base:
 
     # ==== Methods for authorization ====
 
-    input_email = "//input[@id='email']"
-    input_password = "//input[@id='password']"
-    button_submit = "//button[@type='submit']"
-    user_for_test = "//div[contains(text(), 'Alexander')]"
-    url = 'https://dev.clearbuy.com/login'
-
     def open_site(self):
         """Opening the main page"""
-        self.driver.get(self.url)
+        self.driver.get(self.URL)
         self.driver.maximize_window()
 
     def input_email_form(self, email):
         """Entering email"""
-        WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.input_email))).send_keys(email)
+        WebDriverWait(self.driver, 30) \
+            .until(EC.element_to_be_clickable((By.XPATH, self.INPUT_EMAIL))) \
+            .send_keys(email)
 
     def input_password_form(self, password):
         """Entering password"""
-        WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.input_password))).send_keys(password)
+        WebDriverWait(self.driver, 30) \
+            .until(EC.element_to_be_clickable((By.XPATH, self.INPUT_PASSWORD))) \
+            .send_keys(password)
 
     def click_submit(self):
         """Clicking the login button"""
-        WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.button_submit))).click()
+        WebDriverWait(self.driver, 30) \
+            .until(EC.element_to_be_clickable((By.XPATH, self.BUTTON_SUBMIT))) \
+            .click()
 
     def get_logged_user(self):
         """Retrieving the username after login"""
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.user_for_test)))
+        return WebDriverWait(self.driver, 30) \
+            .until(EC.element_to_be_clickable((By.XPATH, self.USER_FOR_TEST)))
 
     def authorization(self, email="alexyankovskio@gmail.com", password="qweQwe123#",
                       expected_username="Alexander Yankovsky"):

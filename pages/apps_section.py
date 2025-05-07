@@ -10,27 +10,27 @@ class AppsSection(OtherSection):
         super().__init__(driver)
 
     # LOCATORS
-    apps = "//a[contains(text(), 'Apps')]"
-    new_app = "//a[contains(text(), 'New App')]"
-    relations_tab = "(//a[@class='block px-6 py-2'])[2]"
-    apps_dropdown = "(//div[@data-type='select-one'])[2]"
-    apps_search = "(//input[@type='search'])[2]"
+    APPS = "//a[contains(text(), 'Apps')]"
+    NEW_APP = "//a[contains(text(), 'New App')]"
+    RELATIONS_TAB = "(//a[@class='block px-6 py-2'])[2]"
+    APPS_DROPDOWN = "(//div[@data-type='select-one'])[2]"
+    APPS_SEARCH = "(//input[@type='search'])[2]"
 
     # GETTERS
     def get_apps(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.apps)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.APPS)))
 
     def get_new_app(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_app)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_APP)))
 
     def get_relations_tab(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.relations_tab)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RELATIONS_TAB)))
 
     def get_apps_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.apps_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.APPS_DROPDOWN)))
 
     def get_apps_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.apps_search)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.APPS_SEARCH)))
 
     # ACTIONS
     def click_apps(self):

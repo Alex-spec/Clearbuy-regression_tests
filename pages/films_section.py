@@ -11,100 +11,100 @@ class FilmSection(MainPage):
 
     # LOCATORS
     """Genres tab locators"""
-    films = "//span[contains(text(), 'Films/TV')]"
-    genres = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[11]"
-    new_genre = "//a[contains(text(), 'New Genre')]"
-    genre_name = "//input[@name='name']"
+    FILMS = "//span[contains(text(), 'Films/TV')]"
+    GENRES = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[11]"
+    NEW_GENRE = "//a[contains(text(), 'New Genre')]"
+    GENRE_NAME = "//input[@name='name']"
 
     """Age ratings locators"""
-    age = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[12]"
-    new_rating = "//a[contains(text(), 'New Rating')]"
-    minimal_age = "//input[@type='number']"
+    AGE = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[12]"
+    NEW_RATING = "//a[contains(text(), 'New Rating')]"
+    MINIMAL_AGE = "//input[@type='number']"
 
     """Films locators"""
-    film = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[13]"
-    new_film = "//a[contains(text(), 'New Film')]"
-    age_dropdown = "(//div[@class='choices mb-0 flex-1'])[2]"
-    age_search = "(//input[@type='search'])[2]"
+    FILM = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[13]"
+    NEW_FILM = "//a[contains(text(), 'New Film')]"
+    AGE_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[2]"
+    AGE_SEARCH = "(//input[@type='search'])[2]"
 
     """Reviews locators"""
-    review = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[14]"
-    new_review = "//a[contains(text(), 'New Review')]"
-    film_field = "(//input[@class='border w-full rounded-md px-4 py-2'])[1]"
-    test_film = "//a[contains(text(), 'Test film')]"
-    title_field = "(//input[@class='border w-full rounded-md px-4 py-2'])[2]"
-    rating_field = "(//input[@class='border w-full rounded-md px-4 py-2'])[4]"
+    REVIEW = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[14]"
+    NEW_REVIEW = "//a[contains(text(), 'New Review')]"
+    FILM_FIELD = "(//input[@class='border w-full rounded-md px-4 py-2'])[1]"
+    TEST_FILM = "//a[contains(text(), 'Test film')]"
+    TITLE_FIELD = "(//input[@class='border w-full rounded-md px-4 py-2'])[2]"
+    RATING_FIELD = "(//input[@class='border w-full rounded-md px-4 py-2'])[4]"
 
     """People locators"""
-    people = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[15]"
-    new_people = "//a[contains(text(), 'Add new')]"
-    people_surname = "//input[@name='surname']"
+    PEOPLE = "(//li[@class='text-white text-opacity-25 hover:text-opacity-100 pl-2'])[15]"
+    NEW_PEOPLE = "//a[contains(text(), 'Add new')]"
+    PEOPLE_SURNAME = "//input[@name='surname']"
 
     # GETTERS
     """Genre getters"""
     def get_films(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.films)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FILMS)))
 
     def get_genres(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.genres)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.GENRES)))
 
     def get_new_genre(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_genre)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_GENRE)))
 
     def get_genre_name(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.genre_name)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.GENRE_NAME)))
 
     """Age ratings getters"""
     def get_age(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.age)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.AGE)))
 
     def get_new_rating(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_rating)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_RATING)))
 
     def get_minimal_age(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.minimal_age)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.MINIMAL_AGE)))
 
     """Films getters"""
     def get_film(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.film)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FILM)))
 
     def get_new_film(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_film)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_FILM)))
 
     def get_age_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.age_dropdown)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.AGE_DROPDOWN)))
 
     def get_age_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.age_search)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.AGE_SEARCH)))
 
     """Reviews getters"""
     def get_review(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.review)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.REVIEW)))
 
     def get_new_review(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_review)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_REVIEW)))
 
     def get_film_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.film_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FILM_FIELD)))
 
     def get_test_film(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.test_film)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.TEST_FILM)))
 
     def get_title_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.title_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.TITLE_FIELD)))
 
     def get_rating_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.rating_field)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RATING_FIELD)))
 
     """People getters"""
     def get_people(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.people)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PEOPLE)))
 
     def get_new_people(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.new_people)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_PEOPLE)))
 
     def get_people_surname(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.people_surname)))
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PEOPLE_SURNAME)))
 
     # ACTIONS
     """Genre actions"""
@@ -189,7 +189,6 @@ class FilmSection(MainPage):
     def input_people_surname(self):
         self.get_people_surname().send_keys("Test surname")
         print("Clicked on the new people button")
-
 
     # METHODS
     def genres_tab_test(self):
