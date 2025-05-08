@@ -1,0 +1,336 @@
+
+-----
+Test: clearbuy_tests.py::test_products_section (call)
+Start time: 2025-05-08 22:15:51.481494
+Start name method: authorization
+
+End time: 2025-05-08 22:15:58.615379
+End name method: authorization
+URL: https://dev.clearbuy.com/admin/products
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_products_section (call)
+Start time: 2025-05-08 22:15:58.615379
+Start name method: attribute_groups_test
+
+End time: 2025-05-08 22:16:01.679964
+End name method: attribute_groups_test
+URL: https://dev.clearbuy.com/admin/attribute_groups
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_products_section (call)
+Start time: 2025-05-08 22:16:01.681120
+Start name method: attributes_tab_test
+
+End time: 2025-05-08 22:16:06.696704
+End name method: attributes_tab_test
+URL: https://dev.clearbuy.com/admin/attributes
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_products_section (call)
+Start time: 2025-05-08 22:16:06.696704
+Start name method: ratings_tab_test
+
+
+-----
+Test: clearbuy_tests.py::test_films_section (call)
+Start time: 2025-05-08 22:16:14.042863
+Start name method: authorization
+
+End time: 2025-05-08 22:16:21.351065
+End name method: authorization
+URL: https://dev.clearbuy.com/admin/products
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_films_section (call)
+Start time: 2025-05-08 22:16:21.352093
+Start name method: genres_tab_test
+
+End time: 2025-05-08 22:16:23.215690
+End name method: genres_tab_test
+URL: https://dev.clearbuy.com/admin/film_genre?id=61&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Ffilm_genres
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_films_section (call)
+Start time: 2025-05-08 22:16:23.917106
+Start name method: age_tab_test
+
+End time: 2025-05-08 22:16:25.965485
+End name method: age_tab_test
+URL: https://dev.clearbuy.com/admin/age_rating?id=43&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fage_ratings
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_films_section (call)
+Start time: 2025-05-08 22:16:26.668538
+Start name method: films_tab_test
+
+End time: 2025-05-08 22:16:31.572137
+End name method: films_tab_test
+URL: https://dev.clearbuy.com/admin/film?id=42&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Ffilms
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_films_section (call)
+Start time: 2025-05-08 22:16:32.273438
+Start name method: reviews_tab_test
+
+End time: 2025-05-08 22:16:35.207543
+End name method: reviews_tab_test
+URL: https://dev.clearbuy.com/admin/film_review?id=20&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Ffilm_reviews
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_films_section (call)
+Start time: 2025-05-08 22:16:35.910796
+Start name method: people_tab_test
+
+End time: 2025-05-08 22:16:37.816289
+End name method: people_tab_test
+URL: https://dev.clearbuy.com/admin/man?id=15&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fpeople
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_os_section (call)
+Start time: 2025-05-08 22:16:50.047938
+Start name method: authorization
+
+End time: 2025-05-08 22:16:57.067352
+End name method: authorization
+URL: https://dev.clearbuy.com/admin/products
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_os_section (call)
+Start time: 2025-05-08 22:16:57.068354
+Start name method: licenses_tab_test
+
+End time: 2025-05-08 22:16:59.511648
+End name method: licenses_tab_test
+URL: https://dev.clearbuy.com/admin/license?id=42&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Flicenses
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_os_section (call)
+Start time: 2025-05-08 22:17:00.212208
+Start name method: os_tab_test
+
+End time: 2025-05-08 22:17:05.843666
+End name method: os_tab_test
+URL: https://dev.clearbuy.com/admin/os?id=41&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Foss
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_users_section (call)
+Start time: 2025-05-08 22:17:13.933605
+Start name method: authorization
+
+End time: 2025-05-08 22:17:21.423948
+End name method: authorization
+URL: https://dev.clearbuy.com/admin/products
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_users_section (call)
+Start time: 2025-05-08 22:17:21.425455
+Start name method: roles_tab_test
+
+End time: 2025-05-08 22:17:23.638332
+End name method: roles_tab_test
+URL: https://dev.clearbuy.com/admin/role?id=51&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Froles
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_users_section (call)
+Start time: 2025-05-08 22:17:24.338953
+Start name method: users_tab_test
+
+End time: 2025-05-08 22:17:26.875257
+End name method: users_tab_test
+URL: https://dev.clearbuy.com/admin/user?id=214&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fusers
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_users_section (call)
+Start time: 2025-05-08 22:17:27.577974
+Start name method: domain_tab_test
+
+End time: 2025-05-08 22:17:30.965511
+End name method: domain_tab_test
+URL: https://dev.clearbuy.com/admin/auth_domains
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:17:39.075387
+Start name method: authorization
+
+End time: 2025-05-08 22:17:46.225737
+End name method: authorization
+URL: https://dev.clearbuy.com/admin/products
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:17:46.225737
+Start name method: other_tab_test
+
+End time: 2025-05-08 22:17:51.045387
+End name method: other_tab_test
+URL: https://dev.clearbuy.com/admin/agent?id=373&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fagents
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:17:51.746172
+Start name method: app_stores_tab_test
+
+End time: 2025-05-08 22:17:55.655436
+End name method: app_stores_tab_test
+URL: https://dev.clearbuy.com/admin/app_store?id=75&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fapp_stores
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:17:56.359250
+Start name method: brands_tab_test
+
+End time: 2025-05-08 22:18:01.390233
+End name method: brands_tab_test
+URL: https://dev.clearbuy.com/admin/brand?id=1142&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fbrands
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:02.091156
+Start name method: countries_tab_test
+
+End time: 2025-05-08 22:18:05.925608
+End name method: countries_tab_test
+URL: https://dev.clearbuy.com/admin/country?id=109&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fcountries
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:06.630279
+Start name method: currencies_tab_test
+
+End time: 2025-05-08 22:18:09.188853
+End name method: currencies_tab_test
+URL: https://dev.clearbuy.com/admin/currency?id=64&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fcurrencies
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:09.892611
+Start name method: measure_tab_test
+
+End time: 2025-05-08 22:18:12.156418
+End name method: measure_tab_test
+URL: https://dev.clearbuy.com/admin/measure?id=81&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fmeasures
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:12.861720
+Start name method: websites_tab_test
+
+End time: 2025-05-08 22:18:16.245281
+End name method: websites_tab_test
+URL: https://dev.clearbuy.com/admin/website?id=48&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fwebsites
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:16.947256
+Start name method: domains_tab_test
+
+End time: 2025-05-08 22:18:19.465357
+End name method: domains_tab_test
+URL: https://dev.clearbuy.com/admin/domain?id=38&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fdomains
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:20.167689
+Start name method: badges_tab_test
+
+End time: 2025-05-08 22:18:24.058292
+End name method: badges_tab_test
+URL: https://dev.clearbuy.com/admin/badge?id=41&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fbadges
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:24.761934
+Start name method: tags_tab_test
+
+End time: 2025-05-08 22:18:27.111696
+End name method: tags_tab_test
+URL: https://dev.clearbuy.com/admin/tag?id=1904&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Ftags
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_other_section (call)
+Start time: 2025-05-08 22:18:27.814928
+Start name method: deal_tags_test
+
+End time: 2025-05-08 22:18:29.915408
+End name method: deal_tags_test
+URL: https://dev.clearbuy.com/admin/deal_tag?id=17&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fdeal_tags
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_apps_section (call)
+Start time: 2025-05-08 22:18:38.079820
+Start name method: authorization
+
+End time: 2025-05-08 22:18:45.555067
+End name method: authorization
+URL: https://dev.clearbuy.com/admin/products
+
+-----
+
+-----
+Test: clearbuy_tests.py::test_apps_section (call)
+Start time: 2025-05-08 22:18:45.555067
+Start name method: apps_tab_test
+
+End time: 2025-05-08 22:18:49.135898
+End name method: apps_tab_test
+URL: https://dev.clearbuy.com/admin/app?id=53&backUrl=https%3A%2F%2Fdev.clearbuy.com%2Fadmin%2Fapps
+
+-----

@@ -4,6 +4,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utilities.logger import Logger
+
+
 class UserSection(OsSection):
     def __init__(self, driver):
         super().__init__(driver)
@@ -158,6 +161,7 @@ class UserSection(OsSection):
 
     # METHODS
     def roles_tab_test(self):
+        Logger.add_start_step(method="roles_tab_test")
         self.click_users()
         self.click_roles()
         self.click_new_role()
@@ -167,9 +171,11 @@ class UserSection(OsSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="roles_tab_test")
         time.sleep(0.7)
 
     def users_tab_test(self):
+        Logger.add_start_step(method="users_tab_test")
         self.click_users_tab()
         self.click_new_user()
         self.input_user_name()
@@ -181,9 +187,11 @@ class UserSection(OsSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="users_tab_test")
         time.sleep(0.7)
 
     def domain_tab_test(self):
+        Logger.add_start_step(method="domain_tab_test")
         self.click_domain()
         self.click_new_domain()
         self.input_domain_field()
@@ -194,6 +202,7 @@ class UserSection(OsSection):
         self.click_select_domain()
         self.click_delete_domain()
         self.assert_word(self.get_deleted_notification(), "deleted successfully")
-        time.sleep(5)
+        Logger.add_end_step(url=self.driver.current_url, method="domain_tab_test")
+
 
 

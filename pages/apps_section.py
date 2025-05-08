@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utilities.logger import Logger
+
+
 class AppsSection(OtherSection):
     def __init__(self, driver):
         super().__init__(driver)
@@ -54,6 +57,7 @@ class AppsSection(OtherSection):
 
     # METHODS
     def apps_tab_test(self):
+        Logger.add_start_step(method="apps_tab_test")
         self.click_apps()
         self.click_new_app()
         self.input_genre_name()
@@ -63,4 +67,4 @@ class AppsSection(OtherSection):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
-        time.sleep(5)
+        Logger.add_end_step(url=self.driver.current_url, method="apps_tab_test")

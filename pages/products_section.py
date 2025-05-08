@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utilities.logger import Logger
+
+
 class MainPage(Base):
     def __init__(self, driver):
         super().__init__(driver)
@@ -461,6 +464,7 @@ class MainPage(Base):
 
     # METHODS
     def attribute_groups_test(self):
+        Logger.add_start_step(method="attribute_groups_test")
         self.click_attribute_groups()
         self.click_new_attribute_button()
         self.input_name_attribute_field("test attribute group")
@@ -473,8 +477,10 @@ class MainPage(Base):
         self.click_delete_item_button()
         self.click_delete_confirmation()
         self.assert_word(self.get_deleted_notification(), "deleted successfully")
+        Logger.add_end_step(url=self.driver.current_url, method="attribute_groups_test")
 
     def attributes_tab_test(self):
+        Logger.add_start_step(method="attributes_tab_test")
         self.click_attributes()
         self.click_new_attribute_button()
         self.input_name_field("test attribute")
@@ -486,8 +492,10 @@ class MainPage(Base):
         self.click_delete_item_button()
         self.click_delete_confirmation()
         self.assert_word(self.get_deleted_notification(), "deleted successfully")
+        Logger.add_end_step(url=self.driver.current_url, method="attributes_tab_test")
 
     def ratings_tab_test(self):
+        Logger.add_start_step(method="ratings_tab_test")
         self.click_ratings()
         self.click_new_attribute_button()
         self.input_name_field("test rating")
@@ -498,20 +506,24 @@ class MainPage(Base):
         self.click_delete_item_button()
         self.click_delete_confirmation()
         self.assert_word(self.get_deleted_notification(), "deleted successfully")
+        Logger.add_end_step(url=self.driver.current_url, method="attribute_groups_test")
 
     def categories_tab_test(self):
+        Logger.add_start_step(method="categories_tab_test")
         self.click_categories()
         self.click_new_attribute_button()
         self.input_name_field("test categorie")
         self.input_commission_field()
         self.click_headphones_radiobutton()
         self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "new item saved successfully")
+        self.assert_word(self.get_success_notification(), "categories_tab_test")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="attribute_groups_test")
         time.sleep(1)
 
     def products_tab_test(self):
+        Logger.add_start_step(method="products_tab_test")
         self.click_get_products()
         self.click_new_attribute_button()
         self.input_name_field("test regress product")
@@ -530,8 +542,10 @@ class MainPage(Base):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_product_button()
         self.assert_word(self.get_product_deleted_notification(), "Deleted successfully")
+        Logger.add_end_step(url=self.driver.current_url, method="products_tab_test")
 
     def deals_tab_test(self):
+        Logger.add_start_step(method="deals_tab_test")
         self.click_deals()
         self.click_new_attribute_button()
         self.input_name_field("test deal")
@@ -546,28 +560,34 @@ class MainPage(Base):
         self.click_delete_item_button()
         self.click_delete_confirmation()
         self.assert_word(self.get_deleted_notification(), "deleted successfully")
+        Logger.add_end_step(url=self.driver.current_url, method="deals_tab_test")
 
     def faq_tab_test(self):
+        Logger.add_start_step(method="faq_tab_test")
         self.click_faq()
         self.click_new_attribute_button()
         self.input_faq_question()
         self.input_faq_answer()
         self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "Saved successfully")
+        self.assert_word(self.get_success_notification(), "faq_tab_test")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="attribute_groups_test")
 
     def faq_group_tab_test(self):
+        Logger.add_start_step(method="faq_group_tab_test")
         time.sleep(1)
         self.click_faq_groups()
         self.click_new_attribute_button()
         self.click_faq_groups_name()
         self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "new item saved successfully")
+        self.assert_word(self.get_success_notification(), "faq_group_tab_test")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="attribute_groups_test")
 
     def model_tab_test(self):
+        Logger.add_start_step(method="model_tab_test")
         time.sleep(1)
         self.click_model_tab()
         self.click_new_attribute_button()
@@ -576,6 +596,7 @@ class MainPage(Base):
         self.assert_word(self.get_success_notification(), "Saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="model_tab_test")
 
 
 

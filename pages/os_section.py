@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utilities.logger import Logger
+
+
 class OsSection(FilmSection):
     def __init__(self, driver):
         super().__init__(driver)
@@ -126,6 +129,7 @@ class OsSection(FilmSection):
 
     # METHODS
     def licenses_tab_test(self):
+        Logger.add_start_step(method="licenses_tab_test")
         self.click_os()
         self.click_license()
         self.click_new_license()
@@ -133,9 +137,11 @@ class OsSection(FilmSection):
         self.click_save_changes_button()
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="licenses_tab_test")
         time.sleep(0.7)
 
     def os_tab_test(self):
+        Logger.add_start_step(method="os_tab_test")
         self.click_os_tab()
         self.click_new_os()
         self.input_genre_name()
@@ -149,5 +155,6 @@ class OsSection(FilmSection):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="os_tab_test")
 
 

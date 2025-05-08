@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utilities.logger import Logger
+
+
 class FilmSection(MainPage):
     def __init__(self, driver):
         super().__init__(driver)
@@ -192,6 +195,7 @@ class FilmSection(MainPage):
 
     # METHODS
     def genres_tab_test(self):
+        Logger.add_start_step(method="genres_tab_test")
         self.click_films()
         self.click_genres()
         self.click_new_genre()
@@ -200,9 +204,11 @@ class FilmSection(MainPage):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="genres_tab_test")
         time.sleep(0.7)
 
     def age_tab_test(self):
+        Logger.add_start_step(method="age_tab_test")
         self.click_age()
         self.click_new_rating()
         self.input_genre_name()
@@ -211,9 +217,11 @@ class FilmSection(MainPage):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="age_tab_test")
         time.sleep(0.7)
 
     def films_tab_test(self):
+        Logger.add_start_step(method="films_tab_test")
         self.click_film()
         self.click_new_film()
         self.input_genre_name()
@@ -222,9 +230,11 @@ class FilmSection(MainPage):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="films_tab_test")
         time.sleep(0.7)
 
     def reviews_tab_test(self):
+        Logger.add_start_step(method="reviews_tab_test")
         self.click_review()
         self.click_new_review()
         self.input_film_field()
@@ -233,9 +243,11 @@ class FilmSection(MainPage):
         self.click_save_changes_button()
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="reviews_tab_test")
         time.sleep(0.7)
 
     def people_tab_test(self):
+        Logger.add_start_step(method="people_tab_test")
         self.click_people()
         self.click_new_people()
         self.input_genre_name()
@@ -243,6 +255,7 @@ class FilmSection(MainPage):
         self.click_save_changes_button()
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="people_tab_test")
         
 
 

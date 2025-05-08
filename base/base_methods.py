@@ -2,9 +2,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
+from utilities.logger import Logger
+
+
 class Base:
     """Base class containing generic methods"""
-    # ==== Локаторы (константы) ====
     INPUT_EMAIL = "//input[@id='email']"
     INPUT_PASSWORD = "//input[@id='password']"
     BUTTON_SUBMIT = "//button[@type='submit']"
@@ -70,9 +72,12 @@ class Base:
     def authorization(self, email="alexyankovskio@gmail.com", password="qweQwe123#",
                       expected_username="Alexander Yankovsky"):
         """Logging into the system"""
+        Logger.add_start_step(method="authorization")
         self.open_site()
         self.input_email_form(email)
         self.input_password_form(password)
         self.click_submit()
         user_element = self.get_logged_user()
         self.assert_word(user_element, expected_username)
+        Logger.add_end_step(url=self.driver.current_url, method="authorization")
+

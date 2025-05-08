@@ -5,6 +5,9 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
+from utilities.logger import Logger
+
+
 class OtherSection(UserSection):
     def __init__(self, driver):
         super().__init__(driver)
@@ -344,6 +347,7 @@ class OtherSection(UserSection):
 
     # METHODS
     def other_tab_test(self):
+        Logger.add_start_step(method="other_tab_test")
         self.click_other()
         self.click_agents_tab()
         self.click_new_agent()
@@ -355,9 +359,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="other_tab_test")
         time.sleep(0.7)
 
     def app_stores_tab_test(self):
+        Logger.add_start_step(method="app_stores_tab_test")
         self.click_app_stores()
         self.click_new_store()
         self.input_genre_name()
@@ -367,9 +373,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="app_stores_tab_test")
         time.sleep(0.7)
 
     def brands_tab_test(self):
+        Logger.add_start_step(method="brands_tab_test")
         self.click_brands()
         self.click_new_brand()
         self.input_genre_name()
@@ -378,9 +386,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="brands_tab_test")
         time.sleep(0.7)
 
     def countries_tab_test(self):
+        Logger.add_start_step(method="countries_tab_test")
         self.click_countries()
         self.click_new_country()
         self.input_genre_name()
@@ -388,9 +398,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="countries_tab_test")
         time.sleep(0.7)
 
     def currencies_tab_test(self):
+        Logger.add_start_step(method="currencies_tab_test")
         self.click_currencies()
         self.click_new_currencies()
         self.input_genre_name()
@@ -400,9 +412,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="currencies_tab_test")
         time.sleep(0.7)
 
     def measure_tab_test(self):
+        Logger.add_start_step(method="measure_tab_test")
         self.click_get_measure()
         self.click_new_measure()
         self.input_genre_name()
@@ -411,9 +425,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="measure_tab_test")
         time.sleep(0.7)
 
     def websites_tab_test(self):
+        Logger.add_start_step(method="websites_tab_test")
         self.click_websites()
         self.click_new_website()
         self.input_genre_name()
@@ -422,9 +438,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="websites_tab_test")
         time.sleep(0.7)
 
     def domains_tab_test(self):
+        Logger.add_start_step(method="domains_tab_test")
         self.click_allowed_domain()
         self.click_new_allowed_domain()
         self.input_domain_allowed_field()
@@ -432,9 +450,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "New item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="domains_tab_test")
         time.sleep(0.7)
 
     def badges_tab_test(self):
+        Logger.add_start_step(method="badges_tab_test")
         self.click_get_badges()
         self.click_new_badge()
         self.input_genre_name()
@@ -442,9 +462,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="badges_tab_test")
         time.sleep(0.7)
 
     def tags_tab_test(self):
+        Logger.add_start_step(method="tags_tab_test")
         self.click_tag()
         self.click_new_tag()
         self.input_genre_name()
@@ -452,9 +474,11 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="tags_tab_test")
         time.sleep(0.7)
 
     def deal_tags_test(self):
+        Logger.add_start_step(method="deal_tags_test")
         self.click_deal_tag()
         self.click_new_tag()
         self.input_genre_name()
@@ -462,6 +486,7 @@ class OtherSection(UserSection):
         self.assert_word(self.get_success_notification(), "new item saved successfully")
         self.click_delete_item_button()
         self.click_delete_confirmation()
+        Logger.add_end_step(url=self.driver.current_url, method="deal_tags_test")
 
 
 
