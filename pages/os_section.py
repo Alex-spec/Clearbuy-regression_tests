@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
-
+import allure
 from utilities.logger import Logger
 
 
@@ -129,32 +129,34 @@ class OsSection(FilmSection):
 
     # METHODS
     def licenses_tab_test(self):
-        Logger.add_start_step(method="licenses_tab_test")
-        self.click_os()
-        self.click_license()
-        self.click_new_license()
-        self.input_genre_name()
-        self.click_save_changes_button()
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="licenses_tab_test")
-        time.sleep(0.7)
+        with allure.step("licenses tab test"):
+            Logger.add_start_step(method="licenses_tab_test")
+            self.click_os()
+            self.click_license()
+            self.click_new_license()
+            self.input_genre_name()
+            self.click_save_changes_button()
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="licenses_tab_test")
+            time.sleep(0.7)
 
     def os_tab_test(self):
-        Logger.add_start_step(method="os_tab_test")
-        self.click_os_tab()
-        self.click_new_os()
-        self.input_genre_name()
-        self.input_os_url()
-        self.click_brand_os_dropdown()
-        self.click_license_dropdown()
-        self.click_releases_tab()
-        self.input_version()
-        self.click_date()
-        self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "saved successfully")
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="os_tab_test")
+        with allure.step("os tab test"):
+            Logger.add_start_step(method="os_tab_test")
+            self.click_os_tab()
+            self.click_new_os()
+            self.input_genre_name()
+            self.input_os_url()
+            self.click_brand_os_dropdown()
+            self.click_license_dropdown()
+            self.click_releases_tab()
+            self.input_version()
+            self.click_date()
+            self.click_save_changes_button()
+            self.assert_word(self.get_success_notification(), "saved successfully")
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="os_tab_test")
 
 

@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
-
+import allure
 from utilities.logger import Logger
 
 
@@ -195,67 +195,72 @@ class FilmSection(MainPage):
 
     # METHODS
     def genres_tab_test(self):
-        Logger.add_start_step(method="genres_tab_test")
-        self.click_films()
-        self.click_genres()
-        self.click_new_genre()
-        self.input_genre_name()
-        self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "new item saved successfully")
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="genres_tab_test")
-        time.sleep(0.7)
+        with allure.step("genres tab test"):
+            Logger.add_start_step(method="genres_tab_test")
+            self.click_films()
+            self.click_genres()
+            self.click_new_genre()
+            self.input_genre_name()
+            self.click_save_changes_button()
+            self.assert_word(self.get_success_notification(), "new item saved successfully")
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="genres_tab_test")
+            time.sleep(0.7)
 
     def age_tab_test(self):
-        Logger.add_start_step(method="age_tab_test")
-        self.click_age()
-        self.click_new_rating()
-        self.input_genre_name()
-        self.input_minimal_age()
-        self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "new item saved successfully")
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="age_tab_test")
-        time.sleep(0.7)
+        with allure.step("age tab test"):
+            Logger.add_start_step(method="age_tab_test")
+            self.click_age()
+            self.click_new_rating()
+            self.input_genre_name()
+            self.input_minimal_age()
+            self.click_save_changes_button()
+            self.assert_word(self.get_success_notification(), "new item saved successfully")
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="age_tab_test")
+            time.sleep(0.7)
 
     def films_tab_test(self):
-        Logger.add_start_step(method="films_tab_test")
-        self.click_film()
-        self.click_new_film()
-        self.input_genre_name()
-        self.click_age_dropdown()
-        self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "saved successfully")
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="films_tab_test")
-        time.sleep(0.7)
+        with allure.step("films tab test"):
+            Logger.add_start_step(method="films_tab_test")
+            self.click_film()
+            self.click_new_film()
+            self.input_genre_name()
+            self.click_age_dropdown()
+            self.click_save_changes_button()
+            self.assert_word(self.get_success_notification(), "saved successfully")
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="films_tab_test")
+            time.sleep(0.7)
 
     def reviews_tab_test(self):
-        Logger.add_start_step(method="reviews_tab_test")
-        self.click_review()
-        self.click_new_review()
-        self.input_film_field()
-        self.input_title_field()
-        self.input_rating_field()
-        self.click_save_changes_button()
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="reviews_tab_test")
-        time.sleep(0.7)
+        with allure.step("reviews tab test"):
+            Logger.add_start_step(method="reviews_tab_test")
+            self.click_review()
+            self.click_new_review()
+            self.input_film_field()
+            self.input_title_field()
+            self.input_rating_field()
+            self.click_save_changes_button()
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="reviews_tab_test")
+            time.sleep(0.7)
 
     def people_tab_test(self):
-        Logger.add_start_step(method="people_tab_test")
-        self.click_people()
-        self.click_new_people()
-        self.input_genre_name()
-        self.input_people_surname()
-        self.click_save_changes_button()
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="people_tab_test")
-        
+        with allure.step("people tab test"):
+            Logger.add_start_step(method="people_tab_test")
+            self.click_people()
+            self.click_new_people()
+            self.input_genre_name()
+            self.input_people_surname()
+            self.click_save_changes_button()
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="people_tab_test")
+
 
 

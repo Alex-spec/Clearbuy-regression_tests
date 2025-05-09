@@ -1,0 +1,24 @@
+Start checking OS section
+Text Alexander Yankovsky matches the Alexander Yankovsky
+Clicked on the OS section
+Clicked on the License tab
+Clicked on the New License button
+Filled in genre name
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the OS tab
+Clicked on the New OS button
+Filled in genre name
+Filled in OS URL
+Clicked Brand OS dropdown and searched
+Clicked License dropdown and selected
+Clicked on the Releases tab and Add button
+Filled in Version
+Filled in Date
+Clicked the 'Save Changes' button
+Text saved successfully matches the saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+End checking OS section
+End test

@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 import time
-
+import allure
 from utilities.logger import Logger
 
 
@@ -57,14 +57,15 @@ class AppsSection(OtherSection):
 
     # METHODS
     def apps_tab_test(self):
-        Logger.add_start_step(method="apps_tab_test")
-        self.click_apps()
-        self.click_new_app()
-        self.input_genre_name()
-        self.click_relations_tab()
-        self.click_apps_dropdown()
-        self.click_save_changes_button()
-        self.assert_word(self.get_success_notification(), "saved successfully")
-        self.click_delete_item_button()
-        self.click_delete_confirmation()
-        Logger.add_end_step(url=self.driver.current_url, method="apps_tab_test")
+        with allure.step("apps tab test"):
+            Logger.add_start_step(method="apps_tab_test")
+            self.click_apps()
+            self.click_new_app()
+            self.input_genre_name()
+            self.click_relations_tab()
+            self.click_apps_dropdown()
+            self.click_save_changes_button()
+            self.assert_word(self.get_success_notification(), "saved successfully")
+            self.click_delete_item_button()
+            self.click_delete_confirmation()
+            Logger.add_end_step(url=self.driver.current_url, method="apps_tab_test")

@@ -1,3 +1,5 @@
+import allure
+
 from pages.other_section import OtherSection
 from pages.os_section import OsSection
 from pages.apps_section import AppsSection
@@ -5,6 +7,7 @@ from pages.products_section import MainPage
 from pages.films_section import FilmSection
 from pages.users_section import UserSection
 
+@allure.description("Test products section")
 def test_products_section(driver):
     print("Start checking products section")
     mp = MainPage(driver)
@@ -20,6 +23,7 @@ def test_products_section(driver):
     mp.model_tab_test()
     print("End checking products section")
 
+@allure.description("Test films section")
 def test_films_section(driver):
     print("Start checking Films/TV section")
     fs = FilmSection(driver)
@@ -31,6 +35,7 @@ def test_films_section(driver):
     fs.people_tab_test()
     print("End checking Films/TV section")
 
+@allure.description("Test os section")
 def test_os_section(driver):
     print("Start checking OS section")
     os = OsSection(driver)
@@ -39,6 +44,7 @@ def test_os_section(driver):
     os.os_tab_test()
     print("End checking OS section")
 
+@allure.description("Test users section")
 def test_users_section(driver):
     print("Start checking users section")
     us = UserSection(driver)
@@ -48,6 +54,7 @@ def test_users_section(driver):
     us.domain_tab_test()
     print("End checking users section")
 
+@allure.description("Test other section")
 def test_other_section(driver):
     print("Start checking other section")
     ots = OtherSection(driver)
@@ -65,6 +72,7 @@ def test_other_section(driver):
     ots.deal_tags_test()
     print("End checking other section")
 
+@allure.description("Test apps section")
 def test_apps_section(driver):
     print("Start checking apps section")
     ap = AppsSection(driver)

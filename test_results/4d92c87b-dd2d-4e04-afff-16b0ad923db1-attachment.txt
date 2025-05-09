@@ -1,0 +1,91 @@
+Start checking other section
+Text Alexander Yankovsky matches the Alexander Yankovsky
+Clicked on the other section
+Clicked on the agents tab
+Clicked on the new agent button
+Filled in genre name
+Filled in country
+Clicked on website
+Clicked on the retailer checkbox
+Clicked the 'Save Changes' button
+Text saved successfully matches the saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the app stores tab
+Clicked on the new store button
+Filled in genre name
+Clicked on the owner dropdown
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the brands tab
+Clicked on the new brand button
+Filled in genre name
+Clicked on the country brand dropdown
+Clicked the 'Save Changes' button
+Text saved successfully matches the saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the countries tab
+Clicked on the new country button
+Filled in genre name
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the currencies tab
+Clicked on the new currencies tab
+Filled in genre name
+Filled in symbol field
+Clicked on the currencies dropdown
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the measure tab
+Clicked on the new measure button
+Filled in genre name
+Filled in short name field
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the websites tab
+Clicked on the new website button
+Filled in genre name
+Filled in domain field
+Clicked the 'Save Changes' button
+Text saved successfully matches the saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the domains tab
+Clicked on the new domain tab
+Filled in allowed domain field
+Clicked the 'Save Changes' button
+Text New item saved successfully matches the New item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the badges tab
+Clicked on the new badge button
+Filled in genre name
+Clicked the 'Save Changes' button
+Text saved successfully matches the saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the tags tab
+Clicked on the new tag button
+Filled in genre name
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the deal tags tab
+Clicked on the new tag button
+Filled in genre name
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+End checking other section
+End test
