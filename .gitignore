@@ -1,0 +1,8 @@
+# Игнорируем кеш Python
+__pycache__/
+.pytest_cache
+tests_results/
+allure-report/
+*.pyc
+*.pyo
+
