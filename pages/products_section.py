@@ -14,7 +14,7 @@ class MainPage(Base):
 
     # LOCATORS
     """Attributes group locators"""
-    ATTRIBUTE_GROUPS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[1]"
+    ATTRIBUTE_GROUPS = "//a[contains(text(), 'Attribute groups')]"
     NEW_ATTRIBUTE_BUTTON = "//a[@class='font-semibold text-white font-grotesk bg-primary btn-shadow hover:bg-green-400 hover:shadow-none py-1 px-5 rounded']"
     NAME_ATTRIBUTE_FIELD = "//input[@type='text']"
     SORT_ORDER = "//input[@type='number']"
@@ -26,7 +26,7 @@ class MainPage(Base):
     DELETED_NOTIFICATION = "//div[contains(text(), 'deleted successfully')]"
 
     """Attributes locators"""
-    ATTRIBUTES = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[2]"
+    ATTRIBUTES = "//a[contains(text(), 'Attributes')]"
     NAME_FIELD = "//input[@name='name']"
     TYPE_DROPDOWN = "(//div[@role='combobox'])[2]"
     NUMERIC_OPTION = "//option[contains(text(), 'numeric')]"
@@ -34,17 +34,17 @@ class MainPage(Base):
     GROUP_DROPDOWN = "(//div[@role='combobox'])[3]"
 
     """Ratings locators"""
-    RATINGS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[3]"
+    RATINGS = "//a[contains(text(), 'Ratings')]"
     RATINGS_SLIDER = "//span[@class='slider']"
     SPEAKERS_CHECKBOX = "(//div[@class='radio__control__indicator'])[1]"
 
     """Categories locators"""
-    CATEGORIES = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[4]"
+    CATEGORIES = "//a[contains(text(), 'Categories')]"
     COMMISSION_FIELD = "//input[@name='commission_percent']"
     HEADPHONES_RADIOBUTTON = "(//div[@class='radio__control__indicator'])[1]"
 
     """Products locators"""
-    PRODUCTS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[5]"
+    PRODUCTS = "//a[contains(text(), 'Products')]"
     CATEGORY_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[3]"
     CATEGORY_OPTION = "//div[@id='choices--category-item-choice-2']"
     BRAND_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[3]"
@@ -59,7 +59,7 @@ class MainPage(Base):
     PRODUCT_DELETED_NOTIFICATION = "//div[contains(text(), 'Deleted successfully')]"
 
     """Deals locators"""
-    DEALS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[6]"
+    DEALS = "//a[contains(text(), 'Deals')]"
     DEAL_PRICE = "//input[@name='price']"
     DEAL_CATEGORY = "(//div[@class='choices__item choices__item--selectable'])[2]"
     DEAL_CATEGORY_SEARCH = "(//input[@type='search'])[2]"
@@ -69,16 +69,16 @@ class MainPage(Base):
     IMAGE_OPTION_CONFIRM = "//a[contains(text(), 'Confirm')]"
 
     """FAQ locators"""
-    FAQ = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[7]"
+    FAQ = "//a[text()='FAQ']"
     FAQ_QUESTION = "//input[@name='question']"
     FAQ_ANSWER = "//body[@id='tinymce']"
 
     """FAQ groups locators"""
-    FAQ_GROUPS = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[8]"
+    FAQ_GROUPS = "//a[contains(text(), 'FAQ Groups')]"
     FAQ_GROUPS_NAME = "//input[@name='name']"
 
     """Model families locators"""
-    MODEL = "(//ul[@class='mb-5 text-sm bg-primary bg-opacity-10'])[1]/li[9]"
+    MODEL = "//a[contains(text(), 'Model families')]"
 
     # GETTERS
     """Attribute groups getters"""

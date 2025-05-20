@@ -1,0 +1,33 @@
+Start checking users section
+Text Alexander Yankovsky matches the Alexander Yankovsky
+Clicked on the users section
+Clicked on the roles tab
+Clicked on the new role button
+Filled in genre name
+Clicked on the permission checkbox
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the users tab
+Clicked on the new user button
+Filled in the name field
+Filled in the email field
+Filled in the password
+Filled in the password confirmation
+Clicked on the admin role checkbox
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the domain tab
+Clicked on the new domain button
+Filled in the domain field
+Clicked the 'Save Changes' button
+Text new item saved successfully matches the new item saved successfully
+Clicked on the domain tab
+Clicked on the select domain checkbox
+Deleted the selected domain
+Text deleted successfully matches the deleted successfully
+End checking users section
+End test

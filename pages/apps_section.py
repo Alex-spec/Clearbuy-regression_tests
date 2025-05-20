@@ -59,6 +59,7 @@ class AppsSection(OtherSection):
     def apps_tab_test(self):
         with allure.step("apps tab test"):
             Logger.add_start_step(method="apps_tab_test")
+            self.driver.execute_script("document.querySelector('.phpdebugbar').style.display = 'none';")
             self.click_apps()
             self.click_new_app()
             self.input_genre_name()

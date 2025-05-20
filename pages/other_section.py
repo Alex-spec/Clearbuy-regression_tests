@@ -349,6 +349,7 @@ class OtherSection(UserSection):
     def other_tab_test(self):
         with allure.step("other tab test"):
             Logger.add_start_step(method="other_tab_test")
+            self.driver.execute_script("document.querySelector('.phpdebugbar').style.display = 'none';")
             self.click_other()
             self.click_agents_tab()
             self.click_new_agent()
