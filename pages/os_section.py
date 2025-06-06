@@ -1,77 +1,81 @@
-from pages.films_section import FilmSection
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
 import time
+
 import allure
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+from base.base_methods import BasePage
+from pages.products_section import ProductsSectionSteps
 from utilities.logger import Logger
 
+class OsSectionsLocators:
 
-class OsSection(FilmSection):
-    def __init__(self, driver):
-        super().__init__(driver)
+    # OS and Licenses locators
 
-    # LOCATORS
-    OS = "//span[contains(text(), 'OS')]"
-    LICENSE = "//a[text()='Licenses']"
-    NEW_LICENSE = "//a[contains(text(), 'New License')]"
-    OS_TAB = "//a[text()='OS']"
-    NEW_OS = "//a[contains(text(), 'New OS')]"
-    OS_URL = "(//input[@class='border w-full rounded-md px-4 py-2'])[2]"
-    BRAND_OS_DROPDOWN = "(//div[@class='choices__item choices__item--selectable'])[1]"
-    BRAND_OS_SEARCH = "(//input[@type='search'])[1]"
-    LICENSE_DROPDOWN = "(//div[@class='choices__item choices__item--selectable'])[2]"
-    LICENSE_SEARCH = "(//input[@type='search'])[2]"
-    RELEASES_TAB = "//a[contains(text(), 'Releases')]"
-    ADD_BUTTON = "//a[contains(text(), 'Add')]"
-    VERSION = "//input[@name='releases[0][version]']"
-    DATE = "//input[@type='date']"
+    OS = (By.XPATH, "//span[contains(text(), 'OS')]")
+    LICENSE = (By.XPATH, "//a[text()='Licenses']")
+    NEW_LICENSE = (By.XPATH, "//a[contains(text(), 'New License')]")
+    NEW_LICENSE_NAME = (By.XPATH, "//input[@name='name']")
+    OS_TAB = (By.XPATH, "//a[text()='OS']")
+    NEW_OS = (By.XPATH, "//a[contains(text(), 'New OS')]")
+    OS_URL = (By.XPATH, "(//input[@class='border w-full rounded-md px-4 py-2'])[2]")
+    BRAND_OS_DROPDOWN = (By.XPATH, "(//div[@class='choices__item choices__item--selectable'])[1]")
+    BRAND_OS_SEARCH = (By.XPATH, "(//input[@type='search'])[1]")
+    LICENSE_DROPDOWN = (By.XPATH, "(//div[@class='choices__item choices__item--selectable'])[2]")
+    LICENSE_SEARCH = (By.XPATH, "(//input[@type='search'])[2]")
+    RELEASES_TAB = (By.XPATH, "//a[contains(text(), 'Releases')]")
+    ADD_BUTTON = (By.XPATH, "//a[contains(text(), 'Add')]")
+    VERSION = (By.XPATH, "//input[@name='releases[0][version]']")
+    DATE = (By.XPATH, "//input[@type='date']")
 
-    # GETTERS
+class OsSectionGetters(BasePage):
+
+    # OS getters
+
     def get_os(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.OS)))
+        return self.wait_for_clickable(OsSectionsLocators.OS)
 
     def get_license(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.LICENSE)))
+        return self.wait_for_clickable(OsSectionsLocators.LICENSE)
 
     def get_new_license(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_LICENSE)))
+        return self.wait_for_clickable(OsSectionsLocators.NEW_LICENSE)
 
     def get_os_tab(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.OS_TAB)))
+        return self.wait_for_clickable(OsSectionsLocators.OS_TAB)
 
     def get_new_os(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_OS)))
+        return self.wait_for_clickable(OsSectionsLocators.NEW_OS)
 
     def get_os_url(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.OS_URL)))
+        return self.wait_for_clickable(OsSectionsLocators.OS_URL)
 
     def get_brand_os_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.BRAND_OS_DROPDOWN)))
+        return self.wait_for_clickable(OsSectionsLocators.BRAND_OS_DROPDOWN)
 
     def get_brand_os_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.BRAND_OS_SEARCH)))
+        return self.wait_for_clickable(OsSectionsLocators.BRAND_OS_SEARCH)
 
     def get_license_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.LICENSE_DROPDOWN)))
+        return self.wait_for_clickable(OsSectionsLocators.LICENSE_DROPDOWN)
 
     def get_license_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.LICENSE_SEARCH)))
+        return self.wait_for_clickable(OsSectionsLocators.LICENSE_SEARCH)
 
     def get_releases_tab(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RELEASES_TAB)))
+        return self.wait_for_clickable(OsSectionsLocators.RELEASES_TAB)
 
     def get_add_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ADD_BUTTON)))
+        return self.wait_for_clickable(OsSectionsLocators.ADD_BUTTON)
 
     def get_version(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.VERSION)))
+        return self.wait_for_clickable(OsSectionsLocators.VERSION)
 
     def get_date(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DATE)))
+        return self.wait_for_clickable(OsSectionsLocators.DATE)
 
-    # ACTIONS
+class OsSectionActions(OsSectionGetters):
+
     def click_os(self):
         self.get_os().click()
         print("Clicked on the OS section")
@@ -119,6 +123,9 @@ class OsSection(FilmSection):
         self.get_version().send_keys("Test version")
         print("Filled in Version")
 
+    def input_new_license_name(self):
+        self.input_text(OsSectionsLocators.NEW_LICENSE_NAME, "Test name")
+
     def click_date(self):
         self.get_date().click()
         self.get_date().send_keys("12")
@@ -127,14 +134,14 @@ class OsSection(FilmSection):
         self.get_date().send_keys("2025")
         print("Filled in Date")
 
-    # METHODS
+class OsSectionSteps(OsSectionActions, ProductsSectionSteps):
     def licenses_tab_test(self):
         with allure.step("licenses tab test"):
             Logger.add_start_step(method="licenses_tab_test")
             self.click_os()
             self.click_license()
             self.click_new_license()
-            self.input_genre_name()
+            self.input_new_license_name()
             self.click_save_changes_button()
             self.click_delete_item_button()
             self.click_delete_confirmation()
@@ -146,7 +153,7 @@ class OsSection(FilmSection):
             Logger.add_start_step(method="os_tab_test")
             self.click_os_tab()
             self.click_new_os()
-            self.input_genre_name()
+            self.input_new_license_name()
             self.input_os_url()
             self.click_brand_os_dropdown()
             self.click_license_dropdown()

@@ -1,116 +1,120 @@
-from pages.products_section import MainPage
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
 import time
+
 import allure
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+from base.base_methods import BasePage
+from pages.products_section import ProductsSectionSteps
 from utilities.logger import Logger
 
+class FilmsSectionLocators:
 
-class FilmSection(MainPage):
-    def __init__(self, driver):
-        super().__init__(driver)
+    # Genres tab locators
+    FILMS = (By.XPATH, "//span[contains(text(), 'Films/TV')]")
+    GENRES = (By.XPATH, "//a[text()='Genres']")
+    NEW_GENRE = (By.XPATH, "//a[contains(text(), 'New Genre')]")
+    GENRE_NAME = (By.XPATH, "//input[@name='name']")
 
-    # LOCATORS
-    """Genres tab locators"""
-    FILMS = "//span[contains(text(), 'Films/TV')]"
-    GENRES = "//a[text()='Genres']"
-    NEW_GENRE = "//a[contains(text(), 'New Genre')]"
-    GENRE_NAME = "//input[@name='name']"
+    # Age ratings locators
+    AGE = (By.XPATH, "//a[text()='Age ratings']")
+    NEW_RATING = (By.XPATH, "//a[contains(text(), 'New Rating')]")
+    MINIMAL_AGE = (By.XPATH, "//input[@type='number']")
 
-    """Age ratings locators"""
-    AGE = "//a[text()='Age ratings']"
-    NEW_RATING = "//a[contains(text(), 'New Rating')]"
-    MINIMAL_AGE = "//input[@type='number']"
+    # Films locators
+    FILM = (By.XPATH, "//a[text()='Films']")
+    NEW_FILM = (By.XPATH, "//a[contains(text(), 'New Film')]")
+    AGE_DROPDOWN = (By.XPATH, "(//div[@class='choices mb-0 flex-1'])[2]")
+    AGE_SEARCH = (By.XPATH, "(//input[@type='search'])[2]")
 
-    """Films locators"""
-    FILM = "//a[text()='Films']"
-    NEW_FILM = "//a[contains(text(), 'New Film')]"
-    AGE_DROPDOWN = "(//div[@class='choices mb-0 flex-1'])[2]"
-    AGE_SEARCH = "(//input[@type='search'])[2]"
+    # Reviews locators
+    REVIEW = (By.XPATH, "//a[text()='Reviews']")
+    NEW_REVIEW = (By.XPATH, "//a[contains(text(), 'New Review')]")
+    FILM_FIELD = (By.XPATH, "(//input[@class='border w-full rounded-md px-4 py-2'])[1]")
+    TEST_FILM = (By.XPATH, "//a[contains(text(), 'Test film')]")
+    TITLE_FIELD = (By.XPATH, "(//input[@class='border w-full rounded-md px-4 py-2'])[2]")
+    RATING_FIELD = (By.XPATH, "(//input[@class='border w-full rounded-md px-4 py-2'])[4]")
 
-    """Reviews locators"""
-    REVIEW = "//a[text()='Reviews']"
-    NEW_REVIEW = "//a[contains(text(), 'New Review')]"
-    FILM_FIELD = "(//input[@class='border w-full rounded-md px-4 py-2'])[1]"
-    TEST_FILM = "//a[contains(text(), 'Test film')]"
-    TITLE_FIELD = "(//input[@class='border w-full rounded-md px-4 py-2'])[2]"
-    RATING_FIELD = "(//input[@class='border w-full rounded-md px-4 py-2'])[4]"
+    # People locators
+    PEOPLE = (By.XPATH, "//a[text()='People']")
+    NEW_PEOPLE = (By.XPATH, "//a[contains(text(), 'Add new')]")
+    PEOPLE_SURNAME = (By.XPATH, "//input[@name='surname']")
 
-    """People locators"""
-    PEOPLE = "//a[text()='People']"
-    NEW_PEOPLE = "//a[contains(text(), 'Add new')]"
-    PEOPLE_SURNAME = "//input[@name='surname']"
+class FilmsSectionGetters(BasePage):
 
-    # GETTERS
-    """Genre getters"""
+    # Genre getters
+
     def get_films(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FILMS)))
+        return self.wait_for_clickable(FilmsSectionLocators.FILMS)
 
     def get_genres(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.GENRES)))
+        return self.wait_for_clickable(FilmsSectionLocators.GENRES)
 
     def get_new_genre(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_GENRE)))
+        return self.wait_for_clickable(FilmsSectionLocators.NEW_GENRE)
 
     def get_genre_name(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.GENRE_NAME)))
+        return self.wait_for_clickable(FilmsSectionLocators.GENRE_NAME)
 
-    """Age ratings getters"""
+    # Age ratings getters
+
     def get_age(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.AGE)))
+        return self.wait_for_clickable(FilmsSectionLocators.AGE)
 
     def get_new_rating(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_RATING)))
+        return self.wait_for_clickable(FilmsSectionLocators.NEW_RATING)
 
     def get_minimal_age(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.MINIMAL_AGE)))
+        return self.wait_for_clickable(FilmsSectionLocators.MINIMAL_AGE)
 
-    """Films getters"""
+    # Films getters
+
     def get_film(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FILM)))
+        return self.wait_for_clickable(FilmsSectionLocators.FILM)
 
     def get_new_film(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_FILM)))
+        return self.wait_for_clickable(FilmsSectionLocators.NEW_FILM)
 
     def get_age_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.AGE_DROPDOWN)))
+        return self.wait_for_clickable(FilmsSectionLocators.AGE_DROPDOWN)
 
     def get_age_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.AGE_SEARCH)))
+        return self.wait_for_clickable(FilmsSectionLocators.AGE_SEARCH)
 
-    """Reviews getters"""
+    # Reviews getters
+
     def get_review(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.REVIEW)))
+        return self.wait_for_clickable(FilmsSectionLocators.REVIEW)
 
     def get_new_review(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_REVIEW)))
+        return self.wait_for_clickable(FilmsSectionLocators.NEW_REVIEW)
 
     def get_film_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.FILM_FIELD)))
+        return self.wait_for_clickable(FilmsSectionLocators.FILM_FIELD)
 
     def get_test_film(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.TEST_FILM)))
+        return self.wait_for_clickable(FilmsSectionLocators.TEST_FILM)
 
     def get_title_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.TITLE_FIELD)))
+        return self.wait_for_clickable(FilmsSectionLocators.TITLE_FIELD)
 
     def get_rating_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RATING_FIELD)))
+        return self.wait_for_clickable(FilmsSectionLocators.RATING_FIELD)
 
-    """People getters"""
+    # People getters
+
     def get_people(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PEOPLE)))
+        return self.wait_for_clickable(FilmsSectionLocators.PEOPLE)
 
     def get_new_people(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_PEOPLE)))
+        return self.wait_for_clickable(FilmsSectionLocators.NEW_PEOPLE)
 
     def get_people_surname(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PEOPLE_SURNAME)))
+        return self.wait_for_clickable(FilmsSectionLocators.PEOPLE_SURNAME)
 
-    # ACTIONS
-    """Genre actions"""
+class FilmsSectionActions(FilmsSectionGetters):
+
+    # Genre actions
     def click_films(self):
         self.get_films().click()
         print("Clicked on the films tab")
@@ -127,7 +131,8 @@ class FilmSection(MainPage):
         self.get_genre_name().send_keys("Test name")
         print("Filled in genre name")
 
-    """Age ratings actions"""
+    # Age ratings actions
+
     def click_age(self):
         self.get_age().click()
         print("Clicked on the age tab")
@@ -142,7 +147,7 @@ class FilmSection(MainPage):
         self.get_minimal_age().send_keys("18")
         print("Filled in minimal age")
 
-    """Films actions"""
+    # Films actions
     def click_film(self):
         self.get_film().click()
         print("Clicked on the films tab")
@@ -158,7 +163,8 @@ class FilmSection(MainPage):
         self.get_age_search().send_keys(Keys.RETURN)
         print("Clicked on the age dropdown")
 
-    """Reviews actions"""
+    # Reviews actions
+
     def click_review(self):
         self.get_review().click()
         print("Clicked on the review tab")
@@ -180,7 +186,7 @@ class FilmSection(MainPage):
         self.get_rating_field().send_keys("18")
         print("Filled in rating field")
 
-    """People actions"""
+    # People actions
     def click_people(self):
         self.get_people().click()
         print("Clicked on the people tab")
@@ -193,7 +199,8 @@ class FilmSection(MainPage):
         self.get_people_surname().send_keys("Test surname")
         print("Clicked on the new people button")
 
-    # METHODS
+class FilmsSectionSteps(FilmsSectionActions, ProductsSectionSteps):
+
     def genres_tab_test(self):
         with allure.step("genres tab test"):
             Logger.add_start_step(method="genres_tab_test")
@@ -261,6 +268,7 @@ class FilmSection(MainPage):
             self.click_delete_item_button()
             self.click_delete_confirmation()
             Logger.add_end_step(url=self.driver.current_url, method="people_tab_test")
+            time.sleep(1)
 
 
 

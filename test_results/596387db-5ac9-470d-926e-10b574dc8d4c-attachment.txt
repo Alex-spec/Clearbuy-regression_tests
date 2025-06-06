@@ -1,0 +1,81 @@
+Start checking products section
+Clicked on the 'Attribute Groups' tab
+Clicked on the 'New Attribute' button
+Entered test text into the name attribute field
+Filled in the 'Sort Order' field
+Filled in the 'Sort Order' field
+Clicked on the attribute slider
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'Attributes' tab
+Clicked on the 'New Attribute' button
+Filled in the 'Name' field
+Clicked the 'Type' dropdown and selected an option
+Clicked on the kind checkbox
+Clicked the 'Group' dropdown and selected an option
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'Ratings' tab
+Clicked on the 'New Attribute' button
+Filled in the 'Name' field
+Clicked on the ratings slider
+Clicked on the 'Speakers' radiobutton
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'Categories' tab
+Clicked on the 'New Attribute' button
+Filled in the 'Name' field
+Filled in the 'Commission' field
+Clicked on the 'Headphones' radiobutton
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'Products' tab
+Clicked on the 'New Attribute' button
+Filled in the 'Name' field
+Page scrolled down by 200 pixels
+Clicked on the 'Category' dropdown
+Clicked on a category option
+Page scrolled down by 50 pixels
+Clicked on the 'Brand' dropdown
+Performed brand search
+Filled in the 'Retail' field
+Clicked on the 'Retail Select' dropdown
+Performed retail select search
+Set the product date
+Clicked 'Save Changes' on product
+Clicked 'Delete Product' button
+Clicked on the 'Deals' tab
+Clicked on the 'New Attribute' button
+Filled in the 'Name' field
+Page scrolled down by 200 pixels
+Set the deal price
+Selected deal category from dropdown
+Filled in the URL field
+Set the deal image
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'FAQ' tab
+Clicked on the 'New Attribute' button
+Filled in the question field
+Filled in the answer field
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'FAQ Groups' tab
+Clicked on the 'New Attribute' button
+Filled in the group name field
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the 'Model Families' tab
+Clicked on the 'New Attribute' button
+Filled in the group name field
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+End checking products section

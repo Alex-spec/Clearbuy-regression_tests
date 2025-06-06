@@ -1,97 +1,101 @@
-from pages.os_section import OsSection
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import time
+
 import allure
+from selenium.webdriver.common.by import By
+
+from base.base_methods import BasePage
+from pages.products_section import ProductsSectionActions
 from utilities.logger import Logger
 
+class UsersSectionLocators:
 
-class UserSection(OsSection):
-    def __init__(self, driver):
-        super().__init__(driver)
+    # Roles locators
+    USERS = (By.XPATH, "//span[contains(text(), 'Users')]")
+    ROLES = (By.XPATH, "//a[text()='Roles']")
+    NEW_ROLE = (By.XPATH, "//a[contains(text(), 'New Role')]")
+    ROLE_NAME = (By.XPATH, "//input[@name='name']")
+    PERMISSION = (By.XPATH, "(//div[@class='mr-1 checkbox__control'])[1]")
 
-    # LOCATORS
-    """Roles locators"""
-    USERS = "//span[contains(text(), 'Users')]"
-    ROLES = "//a[text()='Roles']"
-    NEW_ROLE = "//a[contains(text(), 'New Role')]"
-    PERMISSION = "(//div[@class='mr-1 checkbox__control'])[1]"
+    # Users locators
+    USERS_TAB = (By.XPATH, "//a[text()='Users']")
+    NEW_USER = (By.XPATH, "//a[contains(text(), 'New User')]")
+    USER_NAME = (By.XPATH, "//input[@name='name']")
+    EMAIL = (By.XPATH, "//input[@name='email']")
+    PASSWORD = (By.XPATH, "//input[@name='password']")
+    PASSWORD_CONFIRMATION = (By.XPATH, "//input[@name='password_confirmation']")
+    ADMIN_ROLE = (By.XPATH, "(//div[@class='checkbox__control__indicator'])[1]")
 
-    """Users locators"""
-    USERS_TAB = "//a[text()='Users']"
-    NEW_USER = "//a[contains(text(), 'New User')]"
-    USER_NAME = "//input[@name='name']"
-    EMAIL = "//input[@name='email']"
-    PASSWORD = "//input[@name='password']"
-    PASSWORD_CONFIRMATION = "//input[@name='password_confirmation']"
-    ADMIN_ROLE = "(//div[@class='checkbox__control__indicator'])[1]"
+    # Domains locators
+    DOMAIN = (By.XPATH, "//a[contains(text(), 'Allowed auth domains')]")
+    NEW_DOMAIN = (By.XPATH, "//a[contains(text(), 'Domain')]")
+    DOMAIN_FIELD = (By.XPATH, "//input[@name='domain']")
+    SELECT_DOMAIN = (By.XPATH, "(//input[@class='selectAllCheckable'])[1]")
+    DELETE_DOMAIN = (By.XPATH, "//a[contains(text(), 'Delete Selected')]")
+    DELETE_DOMAIN_CONFIRMATION = (By.XPATH, "//a[normalize-space(text()) = 'Delete']")
 
-    """Domains locators"""
-    DOMAIN = "//a[contains(text(), 'Allowed auth domains')]"
-    NEW_DOMAIN = "//a[contains(text(), 'Domain')]"
-    DOMAIN_FIELD = "//input[@name='domain']"
-    SELECT_DOMAIN = "(//input[@class='selectAllCheckable'])[1]"
-    DELETE_DOMAIN = "//a[contains(text(), 'Delete Selected')]"
-    DELETE_DOMAIN_CONFIRMATION = "//a[normalize-space(text()) = 'Delete']"
+class UsersSectionGetters(BasePage):
 
-    # GETTERS
-    """Roles getters"""
+    # Roles getters
+
     def get_users(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.USERS)))
+        return self.wait_for_clickable(UsersSectionLocators.USERS)
 
     def get_roles(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ROLES)))
+        return self.wait_for_clickable(UsersSectionLocators.ROLES)
 
     def get_new_role(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_ROLE)))
+        return self.wait_for_clickable(UsersSectionLocators.NEW_ROLE)
 
     def get_permission(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PERMISSION)))
+        return self.wait_for_clickable(UsersSectionLocators.PERMISSION)
 
-    """Users getters"""
+   # Users getters
+
     def get_users_tab(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.USERS_TAB)))
+        return self.wait_for_clickable(UsersSectionLocators.USERS_TAB)
 
     def get_new_user(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_USER)))
+        return self.wait_for_clickable(UsersSectionLocators.NEW_USER)
 
     def get_user_name(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.USER_NAME)))
+        return self.wait_for_clickable(UsersSectionLocators.USER_NAME)
 
     def get_email(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.EMAIL)))
+        return self.wait_for_clickable(UsersSectionLocators.EMAIL)
 
     def get_password(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PASSWORD)))
+        return self.wait_for_clickable(UsersSectionLocators.PASSWORD)
 
     def get_password_confirmation(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.PASSWORD_CONFIRMATION)))
+        return self.wait_for_clickable(UsersSectionLocators.PASSWORD_CONFIRMATION)
 
     def get_admin_role(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.ADMIN_ROLE)))
+        return self.wait_for_clickable(UsersSectionLocators.ADMIN_ROLE)
 
-    """Domains getters"""
+   # Domains getters
+
     def get_domain(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DOMAIN)))
+        return self.wait_for_clickable(UsersSectionLocators.DOMAIN)
 
     def get_new_domain(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_DOMAIN)))
+        return self.wait_for_clickable(UsersSectionLocators.NEW_DOMAIN)
 
     def get_domain_field(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DOMAIN_FIELD)))
+        return self.wait_for_clickable(UsersSectionLocators.DOMAIN_FIELD)
 
     def get_select_domain(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.SELECT_DOMAIN)))
+        return self.wait_for_clickable(UsersSectionLocators.SELECT_DOMAIN)
 
     def get_delete_domain(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_DOMAIN)))
+        return self.wait_for_clickable(UsersSectionLocators.DELETE_DOMAIN)
 
     def get_delete_domain_confirmation(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_DOMAIN_CONFIRMATION)))
+        return self.wait_for_clickable(UsersSectionLocators.DELETE_DOMAIN_CONFIRMATION)
 
-    # ACTIONS
-    """Roles actions"""
+class UsersSectionActions(UsersSectionGetters):
+
+    # Roles actions
+
     def click_users(self):
         self.get_users().click()
         print("Clicked on the users section")
@@ -104,11 +108,15 @@ class UserSection(OsSection):
         self.get_new_role().click()
         print("Clicked on the new role button")
 
+    def input_role_name(self):
+        self.input_text(UsersSectionLocators.ROLE_NAME, "Test name")
+
     def click_permission(self):
         self.get_permission().click()
         print("Clicked on the permission checkbox")
 
-    """Users actions"""
+    # Users actions
+
     def click_users_tab(self):
         self.get_users_tab().click()
         print("Clicked on the users tab")
@@ -137,7 +145,7 @@ class UserSection(OsSection):
         self.get_admin_role().click()
         print("Clicked on the admin role checkbox")
 
-    """Domain actions"""
+    # Domain actions
     def click_domain(self):
         self.get_domain().click()
         print("Clicked on the domain tab")
@@ -159,14 +167,14 @@ class UserSection(OsSection):
         self.get_delete_domain_confirmation().click()
         print("Deleted the selected domain")
 
-    # METHODS
+class UsersSectionSteps(UsersSectionActions, ProductsSectionActions):
     def roles_tab_test(self):
         with allure.step("roles tab test"):
             Logger.add_start_step(method="roles_tab_test")
             self.click_users()
             self.click_roles()
             self.click_new_role()
-            self.input_genre_name()
+            self.input_role_name()
             self.click_permission()
             self.click_save_changes_button()
             self.assert_word(self.get_success_notification(), "new item saved successfully")

@@ -1,0 +1,6 @@
+Start checking Films/TV section
+Clicked on the films tab
+Clicked on the genres tab
+Clicked on the new genre button
+Filled in genre name
+Clicked the 'Save Changes' button

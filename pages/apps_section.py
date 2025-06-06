@@ -1,41 +1,39 @@
-from pages.other_section import OtherSection
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support import expected_conditions as EC
 import time
+
 import allure
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+from base.base_methods import BasePage
+from pages.products_section import ProductsSectionActions
 from utilities.logger import Logger
 
+class AppsSectionLocators:
+    APPS = (By.XPATH, "//a[contains(text(), 'Apps')]")
+    NEW_APP = (By.XPATH, "//a[contains(text(), 'New App')]")
+    APP_NAME = (By.XPATH, "//input[@name='name']")
+    RELATIONS_TAB = (By.XPATH, "(//a[@class='block px-6 py-2'])[2]")
+    APPS_DROPDOWN = (By.XPATH, "(//div[@data-type='select-one'])[2]")
+    APPS_SEARCH = (By.XPATH, "(//input[@type='search'])[2]")
 
-class AppsSection(OtherSection):
-    def __init__(self, driver):
-        super().__init__(driver)
-
-    # LOCATORS
-    APPS = "//a[contains(text(), 'Apps')]"
-    NEW_APP = "//a[contains(text(), 'New App')]"
-    RELATIONS_TAB = "(//a[@class='block px-6 py-2'])[2]"
-    APPS_DROPDOWN = "(//div[@data-type='select-one'])[2]"
-    APPS_SEARCH = "(//input[@type='search'])[2]"
-
-    # GETTERS
+class AppsSectionGetters(BasePage):
     def get_apps(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.APPS)))
+        return self.wait_for_clickable(AppsSectionLocators.APPS)
 
     def get_new_app(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.NEW_APP)))
+        return self.wait_for_clickable(AppsSectionLocators.NEW_APP)
 
     def get_relations_tab(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.RELATIONS_TAB)))
+        return self.wait_for_clickable(AppsSectionLocators.RELATIONS_TAB)
 
     def get_apps_dropdown(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.APPS_DROPDOWN)))
+        return self.wait_for_clickable(AppsSectionLocators.APPS_DROPDOWN)
 
     def get_apps_search(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.APPS_SEARCH)))
+        return self.wait_for_clickable(AppsSectionLocators.APPS_SEARCH)
 
-    # ACTIONS
+class AppsSectionActions(AppsSectionGetters):
+
     def click_apps(self):
         self.get_apps().click()
         print("Clicked on the apps section")
@@ -43,6 +41,9 @@ class AppsSection(OtherSection):
     def click_new_app(self):
         self.get_new_app().click()
         print("Clicked on the new app button")
+
+    def input_app_name(self):
+        self.input_text(AppsSectionLocators.APP_NAME, "Test name")
 
     def click_relations_tab(self):
         self.get_relations_tab().click()
@@ -55,14 +56,14 @@ class AppsSection(OtherSection):
         self.get_apps_search().send_keys(Keys.RETURN)
         print("Clicked on the brand dropdown")
 
-    # METHODS
+class AppsSectionSteps(AppsSectionActions, ProductsSectionActions):
     def apps_tab_test(self):
         with allure.step("apps tab test"):
             Logger.add_start_step(method="apps_tab_test")
             self.driver.execute_script("document.querySelector('.phpdebugbar').style.display = 'none';")
             self.click_apps()
             self.click_new_app()
-            self.input_genre_name()
+            self.input_app_name()
             self.click_relations_tab()
             self.click_apps_dropdown()
             self.click_save_changes_button()

@@ -1,0 +1,6 @@
+Start checking users section
+Clicked on the users section
+Clicked on the roles tab
+Clicked on the new role button
+Clicked on the permission checkbox
+Clicked the 'Save Changes' button

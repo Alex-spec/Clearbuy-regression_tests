@@ -4,6 +4,7 @@ import pytest
 import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from pages.login_page import LoginPageSteps
 
 @pytest.fixture(scope="function")
 def driver():
@@ -19,7 +20,7 @@ def driver():
             except Exception:
                 time.sleep(1)
         else:
-            raise RuntimeError("Selenium не отвечает после 10 попыток")
+            raise RuntimeError("Selenium Grid is not responding after 10 attempts")
 
         driver = webdriver.Remote(
             command_executor=selenium_url,
@@ -36,3 +37,7 @@ def driver():
     yield driver
     driver.quit()
 
+@pytest.fixture(autouse=True)
+def login(driver):
+    lp = LoginPageSteps(driver)
+    lp.authorization()

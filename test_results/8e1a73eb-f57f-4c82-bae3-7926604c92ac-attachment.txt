@@ -1,0 +1,68 @@
+Start checking other section
+Clicked on the other section
+Clicked on the agents tab
+Clicked on the new agent button
+Filled in country
+Clicked on website
+Clicked on the retailer checkbox
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the app stores tab
+Clicked on the new store button
+Clicked on the owner dropdown
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the brands tab
+Clicked on the new brand button
+Clicked on the country brand dropdown
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the countries tab
+Clicked on the new country button
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the currencies tab
+Clicked on the new currencies tab
+Filled in symbol field
+Clicked on the currencies dropdown
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the measure tab
+Clicked on the new measure button
+Filled in short name field
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the websites tab
+Clicked on the new website button
+Filled in domain field
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the domains tab
+Clicked on the new domain tab
+Filled in allowed domain field
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the badges tab
+Clicked on the new badge button
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the tags tab
+Clicked on the new tag button
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+Clicked on the deal tags tab
+Clicked on the new tag button
+Clicked the 'Save Changes' button
+Clicked the 'Delete Item' button
+Confirmed deletion
+End checking other section
