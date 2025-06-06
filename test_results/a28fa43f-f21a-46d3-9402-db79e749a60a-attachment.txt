@@ -1,6 +1,0 @@
-Start checking apps section
-Clicked on the apps section
-Clicked on the new app button
-Clicked on the relations tab
-Clicked on the brand dropdown
-Clicked the 'Save Changes' button

@@ -1,8 +1,0 @@
-Start checking other section
-Clicked on the other section
-Clicked on the agents tab
-Clicked on the new agent button
-Filled in country
-Clicked on website
-Clicked on the retailer checkbox
-Clicked the 'Save Changes' button

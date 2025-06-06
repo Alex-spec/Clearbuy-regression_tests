@@ -1,7 +1,0 @@
-Start checking OS section
-Clicked on the OS section
-Clicked on the License tab
-Clicked on the New License button
-Clicked the 'Save Changes' button
-Clicked the 'Delete Item' button
-Confirmed deletion

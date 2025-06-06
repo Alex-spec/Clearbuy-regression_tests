@@ -1,8 +1,0 @@
-Start checking products section
-Clicked on the 'Attribute Groups' tab
-Clicked on the 'New Attribute' button
-Entered test text into the name attribute field
-Filled in the 'Sort Order' field
-Filled in the 'Sort Order' field
-Clicked on the attribute slider
-Clicked the 'Save Changes' button
