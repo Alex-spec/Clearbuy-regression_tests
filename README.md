@@ -25,8 +25,8 @@ This project contains UI regression tests for the Clearbuy web platform, using:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/Alex-spec/Clearbuy-regression_tests.git
-cd clearbuy-regression-tests
+git clone https://github.com/Alex-spec/Clearbuy_regression_tests.git
+cd clearbuy_regression_tests
 ```
 
 2. **Run tests via Docker Compose**
